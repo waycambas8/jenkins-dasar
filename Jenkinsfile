@@ -9,21 +9,17 @@ pipeline {
                 sh "npm install"
             }
         }
-    }
-    stages {
         stage("Npm Build") {
             steps {
                 sh "npm run build"
             }
         }
-    }
-    stages {
         stage("Npm Start Dev") {
             steps {
                 sh "npm run start:dev"
             }
         }
-    }
+    }  
     post {
         success {
             echo "Pipeline build"
