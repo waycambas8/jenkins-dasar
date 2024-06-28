@@ -14,11 +14,6 @@ pipeline {
                 sh "npm run build"
             }
         }
-        stage("Npm Start Dev") {
-            steps {
-                sh "npm run start:dev"
-            }
-        }
     }  
     post {
         success {
