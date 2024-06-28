@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage("Hello") {
             steps {
-                sh "git branch"
+                sh "/home/ec2-user/.nvm/versions/node/v20.4.0/bin/npm -v"
             }
         }
     }
