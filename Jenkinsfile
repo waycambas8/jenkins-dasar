@@ -16,7 +16,8 @@ pipeline {
         }
         stage("Deploy") {
             steps {
-                sh "pm2 start dist/main.js -p 3000"
+                sh 'node_modules\\.bin\\pm2 start ecosystem.config.js --env dev' 
+                sh 'node_modules\\.bin\\pm2 reload all'
             }
         }
     }  
