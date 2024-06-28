@@ -14,6 +14,16 @@ pipeline {
                 sh "npm run build"
             }
         }
+        stage("Npm Build") {
+            steps {
+                sh "npm install pm2 -g"
+            }
+        }
+        stage("Deploy") {
+            steps {
+                sh "pm2 startOrRestart pm2.config.json"
+            }
+        }
     }  
     post {
         success {
