@@ -1,7 +1,7 @@
 pipeline {
     agent any
     tools {
-        nodejs "node-js" // Ganti dengan nama konfigurasi NodeJS Anda
+        nodejs "node-js"
     }
     stages {
         stage("Npm install") {
