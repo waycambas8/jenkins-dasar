@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    tools {
+        nodejs "node-js" // Ganti dengan nama konfigurasi NodeJS Anda
+    }
     stages {
         stage("Hello") {
             steps {
