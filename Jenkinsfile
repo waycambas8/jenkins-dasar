@@ -21,7 +21,7 @@ pipeline {
         }
         stage("Deploy") {
             steps {
-                sh "pm2 start dist/main.js"
+                sh "pm2 start dist/main.js -p 3000"
             }
         }
     }  
